@@ -175,7 +175,7 @@ a {
   position: absolute;
   bottom: 24px;
   right: 16px;
-  background: var(--color-main);
+  /* background: var(--color-main); */
   border: none;
   width: 60px;
   height: 60px;
@@ -189,7 +189,7 @@ a {
 
 
 .floating-button > svg {
-  fill: var(--color-bg);
+  fill: var(--color-main);
 }
 
 
