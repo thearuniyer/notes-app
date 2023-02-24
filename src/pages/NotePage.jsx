@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as BackLogo } from '../assets/arrow-left.svg';
-// import notes from "../assets/data";
 
 const NotePage = ({match, history}) => {
   let noteId = match.params.id
-  // let note = notes.find(note => note.id === Number(noteId))
-  // console.log(match);
   let [note, setNote] = useState(null)
 
   useEffect(() => {
