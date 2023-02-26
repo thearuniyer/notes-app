@@ -1,0 +1,24 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "body": "Todays Agenda\n\n- Walk Dog\n- Feed fish\n- Play basketball\n- Eat a salad\n- go home\n- do work",
+      "updated": "2023-02-24T13:22:50.995Z"
+    },
+    {
+      "id": 2,
+      "body": "Bob from bar down the \n\n- Take out trash\n- Eat food",
+      "updated": "2021-07-13T20:43:18.550058Z"
+    },
+    {
+      "id": 3,
+      "body": "Wash car and chill\ndo some karaoke\nand dance",
+      "updated": "2023-02-24T13:18:38.305Z"
+    },
+    {
+      "body": "This is a new note",
+      "updated": "2023-02-23T16:57:06.294Z",
+      "id": 4
+    }
+  ]
+}
