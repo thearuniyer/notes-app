@@ -4,6 +4,7 @@ import { ReactComponent as BackLogo } from '../assets/arrow-left.svg';
 
 const NotePage = ({match, history}) => {
   let noteId = match.params.id
+  
   let [note, setNote] = useState(null)
 
   useEffect(() => {
@@ -12,23 +13,23 @@ const NotePage = ({match, history}) => {
 
   let getNote = async () => {
     if(noteId === 'new') return
-    let response  = await fetch(`http://localhost:8000/notes/${noteId}`)
+    let response  = await fetch(`/api/notes/${noteId}`)
     let data = await response.json()
     setNote(data)
   }
 
   let updateNote = async () => {
-    await fetch(`http://localhost:8000/notes/${noteId}`, {
+    await fetch(`/api/notes/${noteId}/update`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({...note, 'updated': new Date()})
+      body: JSON.stringify(note)
     })
   }
 
   let createNote = async () => {
-    await fetch(`http://localhost:8000/notes/`, {
+    await fetch(`/api/notes/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -38,7 +39,7 @@ const NotePage = ({match, history}) => {
   }
 
   let deleteNote = async () => {
-    await fetch(`http://localhost:8000/notes/${noteId}`, {
+    await fetch(`/api/notes/${noteId}/delete`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -65,10 +66,9 @@ const NotePage = ({match, history}) => {
     <div className='note'>
       <div className='note-header'>
         <h3>
-          <Link to="/">
-            <BackLogo onClick={handleSubmit}/>
-          </Link>
+          <BackLogo onClick={handleSubmit}/>
         </h3>
+        
         {noteId !== 'new' ? (
           <button onClick={deleteNote}>DELETE</button>
         ) : (

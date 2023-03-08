@@ -1,0 +1,18 @@
+{
+    "version": "0.0.0",
+    "name": "notes-app",
+    "dependencies": {
+        "react-dom": {
+            "version": "18.2.0"
+        },
+        "react-router-dom": {
+            "version": "5.2.0"
+        },
+        "react": {
+            "version": "18.2.0"
+        },
+        "vite-plugin-svgr": {
+            "version": "2.4.0"
+        }
+    }
+}

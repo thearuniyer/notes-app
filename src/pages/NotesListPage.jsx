@@ -15,7 +15,8 @@ const NotesListPage = () => {
   }, [])
 
   let getNotes = async () => {
-    let response = await fetch('http://localhost:8000/notes')
+    // cited: https://stackoverflow.com/questions/64677212/how-to-configure-proxy-in-vite
+    let response = await fetch('/api/notes/')
     let data = await response.json()
     setNotes(data)
   }
